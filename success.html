@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Success</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="success-container">
+        <h1>Membership Successful!</h1>
+        <p>Thank you for becoming a member.</p>
+        <h2>Your Details:</h2>
+        <div id="userDetails"></div>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage and display it
+        document.addEventListener('DOMContentLoaded', function () {
+            const userDetailsDiv = document.getElementById('userDetails');
+            const userData = JSON.parse(localStorage.getItem('userData'));
+
+            if (userData) {
+                userDetailsDiv.innerHTML = `
+                    <p><strong>Full Name:</strong> ${userData.name}</p>
+                    <p><strong>Email:</strong> ${userData.email}</p>
+                    <p><strong>Phone Number:</strong> ${userData.phone}</p>
+                    <p><strong>Selected Plan:</strong> ${userData.plan}</p>
+                `;
+            }
+        });
+
+        function goBack() {
+            window.history.back(); // Go back to the previous page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Nutrition Tips</title>
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+  <div class="bmi-n-diet">
+    <div class="container">
+      <h1>Personalized Nutrition Tips</h1>
+      <p>Select your fitness goal or issue, and we'll give you the best nutrition advice tailored to your needs!</p>
+      
+      <!-- Fitness Goal Section with Icons -->
+      <label for="fitness-goal">Select your fitness goal:</label>
+      <select id="fitness-goal">
+        <option value="muscle-building">Muscle Building</option>
+        <option value="weight-loss">Weight Loss</option>
+        <option value="endurance">Endurance Improvement</option>
+        <option value="recovery">Recovery & Injury Prevention</option>
+      </select>
+      
+      <!-- Progress Bar for Goals -->
+      <div class="progress-container">
+        <p>Your Progress Towards Better Health:</p>
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+  
+      <!-- Nutrition Tip Display -->
+      <div class="tips-box">
+        <p id="tip-display">Choose your goal to get a nutrition tip!</p>
+      </div>
+      
+      <!-- Inspirational Quote Section -->
+      <div class="quote-box">
+        <p id="quote-display">Stay strong. You're capable of amazing things!</p>
+      </div>
+  
+      <button id="get-tip-btn">Get Nutrition Tip</button>
+    </div>
+  
+    <script src="services.js"></script>
+    <div class="con-container2">
+      <div class="container2">
+        <h2>BMI Calculator</h2>
+      
+        <!-- Display selected weight and height -->
+        <div class="row">
+          <label for="weight">Weight (kg):</label>
+          <input type="range" id="weight" min="30" max="150" value="70" oninput="calculate()">
+          <span id="weight-val">70 kg</span>
+        </div>
+      
+        <div class="row">
+          <label for="height">Height (cm):</label>
+          <input type="range" id="height" min="100" max="220" value="170" oninput="calculate()">
+          <span id="height-val">170 cm</span>
+        </div>
+      
+        <!-- Result display for BMI and category -->
+        <div class="display">
+          <p id="result">BMI</p>
+          <p id="category">Category</p>
+        </div>
+      </div>  
+    </div>
+  </div>
+</body>
+</html>
